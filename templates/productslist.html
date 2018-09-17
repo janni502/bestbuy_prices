@@ -1,0 +1,14 @@
+
+<!DOCTYPE html>
+
+
+{% for item in data %}
+    {{ item['name']}}
+    <br>
+     <a href = "{{ url_for('single_product' ,product_key=item.key.urlsafe()) }}" > {{ item['name'] }} </a>
+    {% for price in item['prices'] %}
+        {{price['price']}}
+        <!--<a href="/test?query={{ item.key }}">{{ item['name'] }} </a>-->
+    {% endfor %}
+    <br>
+{% endfor %}

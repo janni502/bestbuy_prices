@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<p>
+
+    {{ product['name']}}
+    <br>
+    {% for price in product['prices'] %}
+        {{ price['price']}}
+    {% endfor %}
+    <br>
+</p>
